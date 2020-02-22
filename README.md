@@ -22,3 +22,30 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+
+## usersテーブル
+
+|Column|Type|Options|
+|id|
+|name|
+|e-mail|
+
+### Associastion
+- has_many :massages
+- belongs_to :group
+
+## groupsテーブル
+
+|Column|Type|Options|
+
+### Asociation
+- has_many :users
+- has_many :massages
+
+## messageテーブル
+
+|Column|Type|Options|
+
+### Asociation
+- belongs_to :user
+- belongs_to :group
