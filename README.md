@@ -26,9 +26,9 @@ Things you may want to cover:
 ## usersテーブル
 
 |Column|Type|Options|
-|id|
-|name|
-|e-mail|
+|user_id|integer|null: false, foreign_key: true|
+|user_name|integer|null: false, foreign_key: true|
+|e-mail|integer|null: false, foreign_key: true|
 
 ### Associastion
 - has_many :massages
@@ -37,6 +37,9 @@ Things you may want to cover:
 ## groupsテーブル
 
 |Column|Type|Options|
+|group_id|integer|null: false, foreign_key: true|
+|group_name|integer|null: false, foreign_key: true|
+|menber_name|integer|null: false, foreign_key: true|
 
 ### Asociation
 - has_many :users
@@ -45,6 +48,9 @@ Things you may want to cover:
 ## messageテーブル
 
 |Column|Type|Options|
+|text|text|
+|image|string|
+|create_at|datetime|
 
 ### Asociation
 - belongs_to :user
