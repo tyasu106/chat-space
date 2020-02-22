@@ -26,31 +26,32 @@ Things you may want to cover:
 ## usersテーブル
 
 |Column|Type|Options|
-|user_id|integer|null: false, foreign_key: true|
-|user_name|integer|null: false, foreign_key: true|
-|e-mail|integer|null: false, foreign_key: true|
+|password|integer|null: false|
+|username|integer|null: false|
+|e-mail|integer|null: false|
+|group_id|integer|null: false|
 
 ### Associastion
-- has_many :massages
-- belongs_to :group
+- has_many :posts
+- has_many :groups, through: :groups_users
 
 ## groupsテーブル
 
 |Column|Type|Options|
-|group_id|integer|null: false, foreign_key: true|
-|group_name|integer|null: false, foreign_key: true|
-|menber_name|integer|null: false, foreign_key: true|
+|groupname|integer|null: false, foreign_key: true|
+|user_id|integer|null: false, foreign_key: true|
 
 ### Asociation
-- has_many :users
-- has_many :massages
+- has_many :users, through: :groups_users
+- has_many :posts
+- has_many :groups_users
 
-## messageテーブル
+## postsテーブル
 
 |Column|Type|Options|
-|text|text|
-|image|string|
-|create_at|datetime|
+|text|text||
+|image|string||
+|user_id|intenger|null: false, foreign_key: true|
 
 ### Asociation
 - belongs_to :user
