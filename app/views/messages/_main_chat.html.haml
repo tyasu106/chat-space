@@ -1,0 +1,29 @@
+-# <チャット画面>
+
+.main_chat
+  .main_chat__header
+    .main_chat__header__left-box
+      .main-chat__header__left-box__current-group
+        test
+      .main-chat__header__left-box__member-list
+        Member: masa
+    %a{ href: '#'}
+      .main-chat__header__edit-btn
+        Edit
+  .messages
+    .messages__box
+      .messages__box__upper-info
+        .messages__box__upper-info__talker
+          masa
+        .messages__box__upper-info__date
+          2020/02/29(sat) 16:00:00
+      .messages__box__text
+        おはよう！
+  .form
+    %form.new_message
+      .input-box
+        %input{type: "text", class: "input-box__text", placeholder: "type a message"}
+        %label{class: "input-box__image"}
+          = icon('fas', 'image')
+          %input{type: "file", class: "input-box__image__file"}
+      %input{type: "submit", class: "submit-btn"}
