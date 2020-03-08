@@ -1,29 +1,24 @@
--# <チャット画面>
-
 .main_chat
   .main_chat__header
     .main_chat__header__left-box
       .main-chat__header__left-box__current-group
-        test
+        = @group.name
       .main-chat__header__left-box__member-list
-        Member: masa
-    %a{ href: '#'}
-      .main-chat__header__edit-btn
-        Edit
+        = "Member :"
+        - @group.group_users.each do |username|
+          = username.user.name
+    .main-chat__header__edit-btn
+      = link_to edit_group_path(@group) do
+        %botton edit
   .messages
-    .messages__box
-      .messages__box__upper-info
-        .messages__box__upper-info__talker
-          masa
-        .messages__box__upper-info__date
-          2020/02/29(sat) 16:00:00
-      .messages__box__text
-        おはよう！
+    = render @messages
+  
   .form
-    %form.new_message
-      .input-box
-        %input{type: "text", class: "input-box__text", placeholder: "type a message"}
-        %label{class: "input-box__image"}
-          = icon('fas', 'image')
-          %input{type: "file", class: "input-box__image__file"}
-      %input{type: "submit", class: "submit-btn"}
+    = form_for [@group, @message] do |f|
+      = f.text_field :content, class: 'form__message', placeholder: 'type a message'
+      .form__mask
+        = f.label :image, class: 'form__mask' do
+          = icon('fas', 'image', class: 'icon')
+          = f.file_field :image, class: 'hidden'
+      = f.submit 'Send', class: 'form__submit'
+          
