@@ -1,15 +1,16 @@
 -# <サイドバー>
 
 .side_bar
-  .side_bar__header__box
-    %p.side_header__box__user-name
-      = current_user.name
-    %ul.side_head__box__user-name__menu
-      %li.side_head__box__user-name__menu__new-group
-        = link_to new_group_path do
-          %i.fa.fa-edit
-        = link_to edit_user_path(current_user) do
-          %i.fa.fa-cog
+  .side_bar__header
+    .side_bar__header__box
+      %p.side_header__box__user-name
+        = current_user.name
+      %ul.side_head__box__user-name__menu
+        %li.side_head__box__user-name__menu__new-group
+          = link_to new_group_path do
+            %i.fa.fa-edit
+          = link_to edit_user_path(current_user) do
+            %i.fa.fa-cog
   .side_bar__group
     - current_user.groups.each do |group|
       .side_bar__group__box
