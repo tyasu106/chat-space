@@ -13,9 +13,12 @@
   background-color:#2f3e51;
   float: left;
   &__header {
+    display: flex;
+    
     background-color: #253141;
     height: 100px;
     &__box {
+      
       background-color: #253141;
       height: 20px;
       width: 260px;
@@ -114,9 +117,11 @@
 
 .side_bar {
   &__group {
-    padding-top: 100px;
+    overflow: scroll;
+    // padding-top: 100px;
     height: 100vh;
     &__box {
+      
       height: 100px;
       &__new-box1 {
         position: relative;
