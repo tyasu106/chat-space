@@ -132,7 +132,7 @@
 
 .side_bar {
   &__group {
-    width: 360px;
+    width: 300px;
     overflow: scroll;
     // padding-top: 100px;
     height: 100vh;
@@ -196,7 +196,7 @@ a {
 .form__mask {
   position: absolute;
   margin-top: 8px;
-  right: 70px;
+  right: 80px;
 }
 
 
@@ -229,6 +229,8 @@ a {
     width: 100px;
     height: 50px;
     background-color: #38aef0;
+    color: white;
+    margin-left: 10px;
   }
 
 
