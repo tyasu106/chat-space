@@ -1,26 +1,45 @@
 * {
   box-sizing: border-box;
+  
 }
 
 .wrapper {
-  height: 100vh;
-  width: 100vw;
+  height: 100%;
+  width: 100%;
 }
 
 .side_bar {
   width: 300px;
-  height: 100vh;
+  // height: 100vh;
   background-color:#2f3e51;
   float: left;
-  
+  &__group {
+    width: 300px;
+    overflow-y: scroll;
+    // padding-top: 100px;
+    height: calc(100vh - 100px);
+    &__box {
+      height: 100px;
+      &__new-box1 {
+        // position: relative;
+        margin:20px 20px 5px;
+        color: white;
+        width: 250px;
+        font-size: 15px;
+        &__new-box2 {
+          font-size: 11px;
+          margin:20px 20px 5px;
+          text-decoration: none;
+        }
+      }
+    }
+  }
   &__header {
     display: block;
     background-color: #253141;
     height: 100px;
     position: relative;
-    
     padding: 0 20px;
-    
     &__box {
       display: flex;
       align-items: center;
@@ -130,29 +149,6 @@
   }
 }
 
-.side_bar {
-  &__group {
-    width: 300px;
-    overflow: scroll;
-    // padding-top: 100px;
-    height: 100vh;
-    &__box {
-      height: 100px;
-      &__new-box1 {
-        position: relative;
-        margin:20px 20px 5px;
-        color: white;
-        width: 250px;
-        font-size: 15px;
-        &__new-box2 {
-          font-size: 11px;
-          margin:20px 20px 5px;
-          text-decoration: none;
-        }
-      }
-    }
-  }
-}
 
 a {
   text-decoration: none;
@@ -179,6 +175,7 @@ a {
 
 .form {
   height: 90px;
+  bottom: 0;
   form {
     background-color: #d2d2d2;
     display: flex;
@@ -250,4 +247,8 @@ i {
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     color: black;
+}
+
+.message__box {
+  margin-bottom: 15px;
 }
