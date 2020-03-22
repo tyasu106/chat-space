@@ -12,18 +12,23 @@
   height: 100vh;
   background-color:#2f3e51;
   float: left;
+  
   &__header {
     display: block;
     background-color: #253141;
     height: 100px;
-    margin: 0;
+    position: relative;
+    
+    padding: 0 20px;
+    
     &__box {
+      display: flex;
+      align-items: center;
       background-color: #253141;
       width: 260px;
       position: absolute;
       top: 35px;
       left: 20px;
-      margin: auto;
       display: flex;
       justify-content: space-between;
     }
