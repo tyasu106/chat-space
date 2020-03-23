@@ -8,8 +8,8 @@
         - @group.group_users.each do |username|
           = username.user.name
     .main_chat__header__edit-btn
-      = link_to edit_group_path(@group) do
-        %botton edit
+      = link_to edit_group_path(@group),class:"editor" do
+        Edit
   .messages
     = render @messages
   
