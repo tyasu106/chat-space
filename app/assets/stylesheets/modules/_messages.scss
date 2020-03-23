@@ -22,13 +22,13 @@
       height: 100px;
       &__new-box1 {
         // position: relative;
-        margin:20px 20px 5px;
+        margin: 20px 20px 5px ;
         color: white;
         width: 250px;
         font-size: 15px;
         &__new-box2 {
           font-size: 11px;
-          margin:20px 20px 5px;
+          margin:20px 20px 5px 0px;
           text-decoration: none;
         }
       }
@@ -196,7 +196,9 @@ a {
   right: 80px;
 }
 
-
+.chat-group-form__input__name {
+  float: left;
+}
 
 .icon {
     
